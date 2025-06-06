@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para Minha Princesa.🤍</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Feliz Dia dos Namorados! ❤️</h1>
+    <p class="mensagem">Você é o melhor presente que Deus me deu, obrigado por ser essa pessoa incrível pra mim. EU TE AMO TANTOOO minha GAROTINHA!!! 💖</p>
+
+    <!-- Nossa História -->
+    <section class="historia">
+      <h2>Nossa História</h2>
+      <ul>
+        <li><strong>20/08/2023</strong> - Quando nos apaixonamos. 😍</li>
+        <li><strong>13/09/2023</strong> - Nosso primeiro beijo. 😘</li>
+        <li><strong>20/12/2023</strong> - Quando começamos a namorar. 💍</li>
+        <li><strong>Hoje</strong> - Cada dia mais e mais apaixonado por você! 🤍</li>
+      </ul>
+    </section>
+
+    <!-- Galeria de Fotos -->
+    <section class="galeria">
+      <h2>Nossos Momentos</h2>
+      <div class="fotos">
+        <img src="./img/foto-01.jpg" alt="Foto 1">
+        <img src="./img/foto-02.jpg" alt="Foto 2">
+        <img src="./img/foto-03.jpg" alt="Foto 3">
+        <img src="./img/foto-04.jpg" alt="Foto 4">
+        <img src="./img/foto-05.jpg" alt="Foto 5">
+      </div>
+    </section>
+
+    <!-- Motivos -->
+    <section class="motivos">
+      <h2>Motivos pelos quais eu te amo.</h2>
+      <ul>
+        <li>Você me faz bem, feliz e amado 💗</li>
+        <li>Você acredita em mim e tenho orgulho de mim 💪</li>
+        <li>Você é uma mulher incrível, perfeita e maravilhosa 😍</li>
+        <li>Você me faz sonhar em ter uma família ao seu lado 👨‍👨‍👧‍👦</li>
+      </ul>
+    </section>
+
+    <!-- Carta -->
+    <section class="carta-section">
+      <h2>Meu Jeito de Falar Eu Te Amo. 💌</h2>
+      <button onclick="mostrarCarta()">Clique para ler</button>
+      <div id="carta" class="carta escondido">
+        <p>Minha Princesa,
+        <br><br>
+        Você é a namorada mais incrível desse mundo, você me faz eu me sentir amado e feliz, você é a minha lua na escuridão, eu não consigo imaginar a minha vida sem você, eu quero ter uma família com você, quero ter uma casa, filhos, carros, quero realizar todos os meus sonhos com você do meu lado, quero você em cada momento da minha vida, nos bons e nos ruins, e quero estar em todos os momentos da sua vida, espero que nosso amor dure uma vida inteira, e que Deus nos abençôe cada vez mais e mais, meu amor e admiração por você só cresce, cada dia mais e mais, obrigado por tudo tá. Você é a melhor namorada do mundo.
+        <br><br>
+        Eu te amo mais que qualquer palavra ou gesto possa dizer. Eu te amo demais minha garota! 🤍</p>
+      </div>
+    </section>
+
+    <footer>
+      <p>Feito com muito amor e carinho para você. 💕</p>
+    </footer>
+  </div>
+
+  <script>
+    function mostrarCarta() {
+      document.getElementById('carta').classList.toggle('escondido');
+    }
+    function criarCoracao() {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = (Math.random() * 2 + 3) + 's';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 5000);
+    }
+    setInterval(criarCoracao, 500);
+  </script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #ffe4e1, #ffccd5);
+  color: #333;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 40px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+h1 {
+  color: #e91e63;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  animation: fadeInDown 1s ease;
+}
+
+h2 {
+  color: #d81b60;
+  margin-top: 40px;
+  animation: fadeInUp 1s ease;
+}
+
+.mensagem {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  animation: fadeIn 2s ease;
+}
+
+.historia ul,
+.motivos ul {
+  list-style: none;
+  padding: 0;
+}
+
+.historia li,
+.motivos li {
+  background-color: #ffe4ec;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 500px;
+  font-size: 1em;
+  animation: fadeInUp 1s ease;
+}
+
+.galeria .fotos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+  animation: fadeIn 2s ease;
+}
+
+.galeria img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button {
+  background-color: #e91e63;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s, transform 0.3s;
+}
+
+button:hover {
+  background-color: #c2185b;
+  transform: scale(1.05);
+}
+
+.carta {
+  margin-top: 20px;
+  background: #fce4ec;
+  padding: 20px;
+  border-radius: 10px;
+  font-style: italic;
+  line-height: 1.6em;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: fadeIn 2s ease;
+}
+
+.escondido {
+  display: none;
+}
+
+footer {
+  margin-top: 40px;
+  font-size: 0.9em;
+  color: #888;
+  animation: fadeInUp 1s ease;
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes floatHearts {
+  0% { transform: translateY(0) scale(1); opacity: 1; }
+  100% { transform: translateY(-100vh) scale(1.5); opacity: 0; }
+}
+
+.heart {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: red;
+  transform: rotate(45deg);
+  animation: floatHearts 5s linear infinite;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: red;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -10px;
+  left: 0;
+}
+
+.heart::after {
+  left: -10px;
+  top: 0;
+}
+
+@media (max-width: 600px) {
+  .galeria img {
+    width: 100px;
+    height: 100px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  .mensagem {
+    font-size: 1em;
+  }
+}
